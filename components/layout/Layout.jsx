@@ -4,6 +4,7 @@ import Head from "next/head";
 import Header from "./Header";
 import MainProvider from "../context/MainContext";
 import ContextWrapper from "./ContextWrapper";
+
 const Layout = (props) => {
   return (
     <MainProvider>
@@ -81,6 +82,45 @@ const Layout = (props) => {
           }
           a {
             text-decoration: none;
+          }
+          .overlay {
+            position: fixed;
+            height: 100vh;
+            width: 100vw;
+            top: 0;
+            left: 0;
+            z-index: 20;
+            &:after {
+              content: "";
+              display: block;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: #0a0a0a;
+              opacity: 0;
+              pointer-events: all;
+            }
+            &.overlay-active {
+              pointer-events: none;
+              &:after {
+                animation-fill-mode: forwards;
+                animation-duration: 0.3s;
+                animation-delay: 0.43s;
+                animation-name: menu-overlay-fadein;
+                animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+              }
+            }
+          }
+          @keyframes menu-overlay-fadein {
+            0% {
+              opacity: 0;
+            }
+            100% {
+              opacity: 0.5;
+              overflow: hidden;
+            }
           }
         `}
       />

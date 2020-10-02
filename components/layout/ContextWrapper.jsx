@@ -4,7 +4,7 @@ const ContextWrapper = (props) => {
   const { blurred } = useContext(MainContext);
   return (
     <>
-      <div className={`overlay ${blurred ? "blurred" : null}`}></div>
+      <div className={`overlay ${blurred ? "overlay-active" : ""}`}></div>
       {props.children}
     </>
   );
