@@ -65,7 +65,7 @@ const Wrapper = styled.div`
     rgba(3, 23, 89, 1) 35%,
     rgba(1, 133, 171, 1) 100%
   );
-  transition: right 0.35s ease-in;
+  transition: right 0.55s ease-in;
   &.open {
     right: 0;
   }
