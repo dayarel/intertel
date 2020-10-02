@@ -1,6 +1,7 @@
 import React from "react";
 import { Global, css } from "@emotion/core";
 import Head from "next/head";
+import Header from "./Header";
 import MainProvider from "../context/MainContext";
 import ContextWrapper from "./ContextWrapper";
 const Layout = () => {
@@ -75,7 +76,37 @@ const Layout = () => {
           }
         `}
       />
-      <ContextWrapper>{props.children}</ContextWrapper>
+      <Head>
+        <title>
+          Intertel Ltd UK | Original Accessories from the Best Brands!
+        </title>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+          integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins&family=Rubik:wght@300;400&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css"
+        ></link>
+
+        <link rel="stylesheet" href="/static/css/app.css" />
+      </Head>
+      <ContextWrapper>
+        <Header />
+        {props.children}
+      </ContextWrapper>
     </MainProvider>
   );
 };
