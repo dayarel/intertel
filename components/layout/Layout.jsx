@@ -84,6 +84,11 @@ const Layout = (props) => {
             margin: 0;
             font-size: 14px;
             font-size: 1.4rem;
+            line-height: 1.31;
+            @media (min-width: 768px) {
+              font-size: 24px;
+              font-size: 2.4rem;
+            }
           }
           ::placeholder {
             color: white;

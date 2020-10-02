@@ -45,7 +45,7 @@ export default Hero;
 
 const HeroWrapper = styled.section`
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   position: relative;
   background-color: #017ca5;
   overflow: hidden;
