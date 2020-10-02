@@ -74,6 +74,14 @@ const Layout = (props) => {
             color: white;
             text-align: center;
           }
+          ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+          }
+          a {
+            text-decoration: none;
+          }
         `}
       />
       <Head>
