@@ -22,12 +22,20 @@ export default SectionHeader;
 const SectionHeading = styled.div`
   .header-content {
     margin-top: 20px;
-
+    @media (min-width: 992px) {
+      display: flex;
+    }
     h1 {
+      @media (min-width: 992px) {
+        flex: 4;
+      }
     }
     & > div {
       margin-top: 55px;
-
+      @media (min-width: 992px) {
+        flex: 8;
+        margin-top: 0;
+      }
       p + p {
         margin-top: 35px;
       }
