@@ -49,14 +49,28 @@ const Layout = (props) => {
           h3 {
             font-size: 33px;
             font-size: 3.3rem;
-            line-height: 40px;
-            line-height: 4rem;
+            line-height: 1.21;
+            @media (min-width: 768px) {
+              font-size: 48px;
+              font-size: 4.8rem;
+            }
+            @media (min-width: 1600px) {
+              font-size: 60px;
+              font-size: 6rem;
+            }
           }
           h2 {
-            font-size: 22px;
-            font-size: 2.2rem;
-            line-height: 22px;
-            line-height: 2.2rem;
+            font-size: 19px;
+            font-size: 1.9rem;
+            line-height: 1.31;
+            @media (min-width: 768px) {
+              font-size: 26px;
+              font-size: 2.6rem;
+            }
+            @media (min-width: 1600px) {
+              font-size: 35px;
+              font-size: 3.5rem;
+            }
           }
           p,
           li,
@@ -90,6 +104,7 @@ const Layout = (props) => {
             top: 0;
             left: 0;
             z-index: 20;
+            pointer-events: none;
             &:after {
               content: "";
               display: block;
@@ -100,10 +115,10 @@ const Layout = (props) => {
               height: 100%;
               background-color: #0a0a0a;
               opacity: 0;
-              pointer-events: all;
+              z-index: -1;
             }
             &.overlay-active {
-              pointer-events: none;
+              z-index: 20;
               &:after {
                 animation-fill-mode: forwards;
                 animation-duration: 0.3s;
@@ -118,7 +133,7 @@ const Layout = (props) => {
               opacity: 0;
             }
             100% {
-              opacity: 0.5;
+              opacity: 0.85;
               overflow: hidden;
             }
           }
