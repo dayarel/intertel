@@ -4,7 +4,7 @@ import Head from "next/head";
 import Header from "./Header";
 import MainProvider from "../context/MainContext";
 import ContextWrapper from "./ContextWrapper";
-
+import Footer from "./Footer";
 const Layout = (props) => {
   return (
     <MainProvider>
