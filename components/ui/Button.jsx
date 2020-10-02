@@ -20,10 +20,15 @@ const Button = ({ center, link, content }) => {
           color: #fff !important;
           line-height: 55px;
           font-size: 15px;
-          max-width: 50%;
+
           &:hover {
             background-color: white;
             color: #031759 !important;
+          }
+          @media (min-width: 768px) {
+            max-width: 320px;
+            font-size: 17px;
+            font-size: 1.7rem;
           }
         `}
         className={`btn ${center ? "center" : null}`}

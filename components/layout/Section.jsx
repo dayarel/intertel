@@ -12,7 +12,7 @@ const MainSection = styled.section`
   padding: 65px 0;
   margin-top: ${(props) => (props.first ? "225px" : "0")};
   @media (min-width: 1200px) {
-    padding: 155px 0;
+    padding: 95px 0;
   }
 
   a:not(.center) {
