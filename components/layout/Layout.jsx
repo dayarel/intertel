@@ -4,7 +4,7 @@ import Head from "next/head";
 import Header from "./Header";
 import MainProvider from "../context/MainContext";
 import ContextWrapper from "./ContextWrapper";
-const Layout = () => {
+const Layout = (props) => {
   return (
     <MainProvider>
       <Global
@@ -100,8 +100,6 @@ const Layout = () => {
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css"
         ></link>
-
-        <link rel="stylesheet" href="/static/css/app.css" />
       </Head>
       <ContextWrapper>
         <Header />
