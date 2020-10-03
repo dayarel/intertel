@@ -29,6 +29,9 @@ const SectionHeading = styled.div`
       @media (min-width: 992px) {
         flex: 4;
       }
+      @media (min-width: 1200px) {
+        flex: 3;
+      }
     }
     & > div {
       margin-top: 25px;
@@ -39,6 +42,10 @@ const SectionHeading = styled.div`
         flex: 8;
         margin-top: 0;
         margin-left: 50px;
+      }
+      @media (min-width: 1200px) {
+        flex: 9;
+        margin-left: 95px;
       }
       p + p {
         margin-top: 35px;
