@@ -92,7 +92,7 @@ export default Footer;
 
 const FooterDiv = styled.footer`
   width: 82.63%;
-  margin: 0 auto;
+  margin: 95px auto 0;
   max-width: 1140px;
   h2,
   p,
