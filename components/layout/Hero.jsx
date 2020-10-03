@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "@emotion/styled";
-const Hero = ({ children, title }) => {
+const Hero = ({ children, title, full }) => {
   return (
-    <HeroWrapper>
+    <HeroWrapper full={full}>
       <div className="hero-header">
         {title ? <h2>{title}</h2> : null}
-        <div className="hero-content">{children}</div>
+        <div className={`hero-content ${full ? "full" : ""}`}>{children}</div>
       </div>
 
       <Scroll>
@@ -62,6 +62,15 @@ const HeroWrapper = styled.section`
   }
   h2 + .hero-content {
     margin-top: 30px;
+  }
+  .hero-content {
+    h1 {
+      max-width: ${(props) => (props.full ? "100%" : "740px")};
+      @media (min-width: 1200px) {
+        font-size: 60px;
+        font-size: 6rem;
+      }
+    }
   }
 `;
 
