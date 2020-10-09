@@ -25,6 +25,7 @@ const Layout = (props) => {
           *:before,
           *:after {
             box-sizing: inherit;
+            outline: none;
           }
           body {
             font-size: 16px;
@@ -91,6 +92,7 @@ const Layout = (props) => {
             }
           }
           ::placeholder {
+            opacity: 0.6;
             color: white;
             text-align: center;
           }
